@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+{% block content %}
+<h2>Resources</h2>
+<ul>
+    {% for p in resources %}
+    <li><a href="{% url 'r_details' id=p.id %}">{{ p.resourcename }}</a></li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
